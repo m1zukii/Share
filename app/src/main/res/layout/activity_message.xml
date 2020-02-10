@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:is_circle="true"
+            android:scaleType="centerCrop"
+            app:icon_src_normal="@drawable/addmoment"
+            android:layout_gravity="left|center_vertical"
+            android:id="@+id/message_addContact"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="消息"
+            android:textSize="18sp"
+            android:textColor="#00FF00"
+            android:id="@+id/message_title"/>
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="@drawable/custom_divider">
+
+    </View>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/message_recyclerview">
+
+    </android.support.v7.widget.RecyclerView>
+    <include
+        android:id="@+id/bottom_layout"
+        layout="@layout/bottombar_layout" />
+</LinearLayout>

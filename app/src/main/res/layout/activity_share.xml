@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/share_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="#EE82EE"
+            android:text="取消" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="分享动态"
+            android:textColor="#FF00FF"/>
+        <Button
+            android:id="@+id/share_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="#DB7093"
+            android:text="发布" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="选择类别" />
+    <!--"普通","政治","经济","社会时事","娱乐","体育",-->
+    <!--"地区","电影音乐","游戏","搞笑","明星","学习"-->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radiogroup1">
+        <RadioButton
+            android:id="@+id/putong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通" />
+        <RadioButton
+            android:id="@+id/yule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="娱乐" />
+        <RadioButton
+            android:id="@+id/tiyu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="体育" />
+        <RadioButton
+            android:id="@+id/zhengzhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="政治" />
+        <RadioButton
+            android:id="@+id/jingji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="经济" />
+        <RadioButton
+            android:id="@+id/yinyue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="音乐"
+            />
+    </RadioGroup>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radiogroup2">
+        <RadioButton
+            android:id="@+id/diqu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地区" />
+        <RadioButton
+            android:id="@+id/youxi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="游戏" />
+        <RadioButton
+            android:id="@+id/gaoxiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搞笑" />
+        <RadioButton
+            android:id="@+id/xuexi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学习" />
+        <RadioButton
+            android:id="@+id/mingxing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="明星" />
+        <RadioButton
+            android:id="@+id/dianying"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电影"
+            />
+    </RadioGroup>
+    <EditText
+        android:id="@+id/share_text"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:gravity="start"
+        android:hint="这一刻的想法..."
+        android:lines="4"
+        android:textColor="#474747"
+        android:textColorHint="#C6C6C6" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/share_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:overScrollMode="never" />
+</LinearLayout>

@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml:1:1-58
+INJECTED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml:1:1-58
+INJECTED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml:1:1-58
+	package
+		ADDED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml:1:11-55
+		INJECTED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml
+		INJECTED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml:1:1-58
+uses-sdk
+INJECTED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml
+INJECTED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml
+INJECTED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml
+INJECTED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml
+		ADDED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml
+		INJECTED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml
+		ADDED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml
+		INJECTED from G:\AndroidProject\Share\magicindicator\src\main\AndroidManifest.xml

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.PersonDetailActivity">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlPrimaryColor="#4169E1"
+        app:srlAccentColor="#48D1CC"
+        app:srlEnablePreviewInEditMode="false">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/collapse"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:contentScrim="?attr/colorPrimary"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:titleEnabled="false">
+
+                    <RelativeLayout
+                        android:id="@+id/layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp">
+
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="280dp"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical">
+
+                            <com.ruffian.library.widget.RImageView
+                                android:id="@+id/usericon_collapse"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginTop="35dp"
+                                android:layout_marginRight="25dp"
+                                app:icon_src_normal="@drawable/edit_background"
+                                app:is_circle="true" />
+
+                            <com.ruffian.library.widget.RTextView
+                                android:id="@+id/username_collapse"
+                                android:layout_width="70dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:textColor="#7B68EE"
+                                android:textSize="28sp"
+                                app:border_color_normal="#7B68EE"
+                                app:border_width_normal="1dp"
+                                app:corner_radius="4dp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:background="@color/aquamarine"
+                        android:orientation="vertical">
+                        <com.ruffian.library.widget.RTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/skyblue"
+                            android:text="动态列表"/>
+                    </LinearLayout>
+
+                </android.support.design.widget.CollapsingToolbarLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/moment_recycerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/AppTheme.Toolbar"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/transparent"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="?attr/homeAsUpIndicator">
+
+        <android.support.v7.widget.ButtonBarLayout
+            android:id="@+id/buttonBarLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <com.ruffian.library.widget.RImageView
+                android:id="@+id/usericon_topbar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:is_circle="true" />
+
+            <TextView
+                android:id="@+id/username_topbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:text="12321"
+                android:textSize="16sp" />
+        </android.support.v7.widget.ButtonBarLayout>
+    </android.support.v7.widget.Toolbar>
+</FrameLayout>

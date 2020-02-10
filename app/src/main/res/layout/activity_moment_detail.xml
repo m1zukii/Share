@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+
+                android:text="返回" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="动态详情" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp">
+
+            <com.ruffian.library.widget.RImageView
+                android:id="@+id/moment_usericon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:is_circle="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <com.ruffian.library.widget.RTextView
+                    android:id="@+id/moment_username"
+                    android:layout_width="100dp"
+
+                    android:layout_height="20dp"
+                    android:textColor="#00BFFF"
+                    android:textSize="16sp" />
+
+                <com.ruffian.library.widget.RTextView
+                    android:id="@+id/moment_publishTime"
+                    android:layout_width="100dp"
+
+                    android:layout_height="10dp"
+                    android:textColor="#00BFFF"
+                    android:textSize="8sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/moment_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#6495ED"
+            android:textSize="18sp" />
+
+        <com.assionhonty.lib.assninegridview.AssNineGridView
+            android:id="@+id/moment_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:visibility="visible"
+            app:angv_gridSpace="3dp"
+            app:angv_maxSize="9"
+            app:angv_singleImgRatio="1" />
+
+        <cn.jzvd.JZVideoPlayerStandard
+            android:id="@+id/moment_video"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:id="@+id/top">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:id="@+id/moment_commentlayout">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/comment"
+                    android:id="@+id/moment_comment_image"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:id="@+id/moment_comment_times"
+                    android:textSize="15sp"
+                    android:textColor="#48D1CC"
+                    android:layout_marginLeft="40dp"
+                    android:text="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:id="@+id/moment_goodlayout">
+                <com.zhuang.likeviewlibrary.LikeView
+                    android:id="@+id/likeView"
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:like_canCancel="true"
+                    app:like_hasFly="true"
+                    app:like_iconSize="18dp"
+                    app:like_textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:focusableInTouchMode="false"
+            android:visibility="gone"
+            android:id="@+id/commentLayout">
+
+            <com.ruffian.library.widget.REditText
+                android:id="@+id/moment_comment_text"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:hint="请输入评论"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#6495ED"
+                android:textSize="18sp"
+                app:border_color_normal="#40E0D0"
+                app:corner_radius="4dp" />
+
+            <Button
+                android:id="@+id/moment_send_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="发送" />
+        </LinearLayout>
+
+        <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="400dp">-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/comment_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+        <!--</ScrollView>-->
+
+    </LinearLayout>
+</ScrollView>

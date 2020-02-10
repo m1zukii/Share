@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Share</string>
+    <string name="title_activity_login2">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="label_sample">sample</string>
+    <string name="label_aspect_ratio">宽高比</string>
+    <string name="label_dynamic">动态的</string>
+    <string name="label_image_source">根据图片源的比例</string>
+    <string name="label_square">正方形的</string>
+    <string name="label_max_cropped_image_size">最大尺寸</string>
+    <string name="label_compression_settings">压缩设定</string>
+    <string name="label_ui">UI</string>
+    <string name="label_width">宽</string>
+    <string name="label_height">高</string>
+    <string name="label_resize_image_to_max_size">调整图片到最大尺寸</string>
+    <string name="label_hide_bottom_ui_controls">Hide bottom UI controls</string>
+    <string name="label_freestyle_crop">自由裁剪</string>
+    <string name="label_select_picture">Select Picture</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_ok">OK</string>
+
+    <string name="notification_image_saved">Image saved</string>
+    <string name="notification_image_saved_click_to_preview">照片裁剪成功，点击预览</string>
+
+    <string name="menu_download">确定</string>
+
+    <string name="button_pick_amp_crop">从相册中挑选并裁剪></string>
+    <string name="button_crop_random_image">随机裁剪</string>
+
+    <string name="description_cropped_image">Cropped image</string>
+
+    <string name="format_crop_result_d_d">剪切结果 (%1$dx%2$d)</string>
+    <string name="format_quality_d">Quality: %d</string>
+    <string name="format_d_d_px">%1$dx%2$d px</string>
+    <string name="format_max_cropped_image_size">Max cropped image size cannot be less then %d</string>
+    <string name="format_max_cropped_image_size_resolution">Too big resolution</string>
+
+    <string name="permission_title_rationale">需要权限</string>
+    <string name="permission_read_storage_rationale">需要读取权限来选择图片</string>
+    <string name="permission_write_storage_rationale">需要写权限来保存图片</string>
+
+    <string name="toast_cannot_retrieve_selected_image">Cannot retrieve selected image</string>
+    <string name="toast_cannot_retrieve_cropped_image">Cannot retrieve cropped image</string>
+    <string name="toast_unexpected_error">不可知错误</string>
+
+    <string name="file_provider_authorities">com.iu.share.provider</string>
+    <string name="channel_name">ucrop_chanel</string>
+    <string name="channel_description">ucrop result image</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

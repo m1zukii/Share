@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="Share" />
+
+
+    <version value="3" />
+
+
+    <list>
+        <mapping class="com.iu.share.Bean.User"></mapping>
+
+    </list>
+
+
+
+</litepal>

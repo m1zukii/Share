@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.MsgMapper">
+  <resultMap id="BaseResultMap" type="model.Msg">
+    <result column="content" jdbcType="CHAR" property="content" />
+    <result column="time" jdbcType="BIGINT" property="time" />
+    <result column="fromUser" jdbcType="CHAR" property="fromuser" />
+    <result column="toUser" jdbcType="CHAR" property="touser" />
+  </resultMap>
+  <insert id="insert" parameterType="model.Msg">
+    insert into msg (content, time, fromUser, 
+      toUser)
+    values (#{content,jdbcType=CHAR}, #{time,jdbcType=BIGINT}, #{fromuser,jdbcType=CHAR}, 
+      #{touser,jdbcType=CHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select content, time, fromUser, toUser
+    from msg
+  </select>
+  <select id="select1" parameterType="map" resultMap="BaseResultMap">
+   select * from msg where (fromUser = #{f1,jdbcType=CHAR} 
+   and toUser = #{f2,jdbcType=CHAR}) 
+   or (fromUser = #{f2,jdbcType=CHAR} 
+   and toUser = #{f1,jdbcType=CHAR})
+  </select>
+</mapper>

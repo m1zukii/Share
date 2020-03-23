@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.MomentMapper">
+  <resultMap id="BaseResultMap" type="model.Moment">
+    <result column="username" jdbcType="CHAR" property="username" />
+    <result column="sharetext" jdbcType="CHAR" property="sharetext" />
+    <result column="publishtime" jdbcType="BIGINT" property="publishtime" />
+    <result column="type" jdbcType="CHAR" property="type" />
+    <result column="good" jdbcType="INTEGER" property="good" />
+    <result column="imglist" jdbcType="LONGVARCHAR" property="imglist" />
+    <result column="videolist" jdbcType="LONGVARCHAR" property="videolist" />
+    <result column="commentlist" jdbcType="LONGVARCHAR" property="commentlist" />
+  </resultMap>
+  <insert id="insert" parameterType="model.Moment">
+    insert into moment (username, sharetext, publishtime, 
+      type, good, imglist, 
+      videolist, commentlist)
+    values (#{username,jdbcType=CHAR}, #{sharetext,jdbcType=CHAR}, #{publishtime,jdbcType=BIGINT}, 
+      #{type,jdbcType=CHAR}, #{good,jdbcType=INTEGER}, #{imglist,jdbcType=LONGVARCHAR}, 
+      #{videolist,jdbcType=LONGVARCHAR}, #{commentlist,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select username, sharetext, publishtime, type, good, imglist, videolist, commentlist
+    from moment
+  </select>
+  <select id="selectType" resultMap="BaseResultMap">
+    select username, sharetext, publishtime, type, good, imglist, videolist, commentlist
+    from moment
+    where type = #{type,jdbcType=CHAR}
+  </select>
+   <select id="selectType" resultMap="BaseResultMap">
+    select username, sharetext, publishtime, type, good, imglist, videolist, commentlist
+    from moment
+    where username = #{username,jdbcType=CHAR}
+  </select>
+   <select id="selectType" resultMap="BaseResultMap">
+    select username, sharetext, publishtime, type, good, imglist, videolist, commentlist
+    from moment
+    where sharetext like concat ('%',#{text,jdbcType=CHAR},'%')
+  </select>
+  <update id="uploadComment" >
+  	update moment set commentlist = #{text,jdbcType=CHAR} where ( username = #{username,jdbcType=CHAR} and publishtime = #{username,jdbcType=CHAR} )
+  </update>
+</mapper>
